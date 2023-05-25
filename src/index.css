@@ -1,0 +1,328 @@
+*
+{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+body
+{
+  height:100vh;
+}
+
+#root
+{
+  height:100%;
+  width:100%;
+}
+
+.headerContainer
+{
+  height:50px;
+  width:100%;
+  background-color: grey;
+  display:flex;
+  justify-content: space-between;
+}
+
+.headerContainer nav
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer nav a
+{
+  text-decoration:none;
+  font-size:35px;
+  margin:10px;
+}
+
+.headerContainer nav a.active
+{
+  color:red;
+}
+
+.homeContainer
+{
+  display: flex;
+  height:100%;
+  width:100%;
+}
+
+.homeContainer1,.homeContainer2
+{
+  height:100%;
+  width: 50%;
+  background-color: pink;
+}
+
+.homeContainer1
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+
+.homeContainer1 img
+{
+  display:block;
+  height:350px;
+  width: 350px;
+  transform:rotate(0deg);
+  animation-name:imgrotate;
+  animation-duration:15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: invert(8%) sepia(100%) saturate(7483%) hue-rotate(248deg) brightness(91%) contrast(143%);
+}
+
+@keyframes imgrotate
+{
+  0%{
+    transform:rotate(0deg);
+    filter: invert(8%) sepia(100%) saturate(7483%) hue-rotate(248deg) brightness(91%) contrast(143%);
+  }
+  100%{
+    transform:rotate(360deg);
+    filter: invert(21%) sepia(95%) saturate(3677%) hue-rotate(271deg) brightness(92%) contrast(106%);
+  }
+}
+
+.homeContainer2 ul
+{
+  position: relative;
+}
+
+.homeContainer2 li
+{
+  list-style: none;
+  font-size: 25px;
+  margin-left:50px;
+  text-align: justify;
+  padding:10px;
+  line-height: 30px;
+}
+
+.homeContainer2 li::before
+{
+  content: '';
+  position:absolute;
+  left:15px;
+  height: 30px;
+  width: 30px;
+  background-image: url("./image/logo.png");
+  background-size:30px;
+}
+
+h1
+{
+  text-align: center;
+}
+
+.imgList
+{
+  height:100%;
+  width:100%;
+}
+
+.imgContainer
+{
+  height:200px;
+  display: inline-block;
+  flex-direction: column;
+}
+
+.imgName
+{
+  height:10%;
+  width:100%;
+  text-align:center;
+  font-weight: bold;
+  background-color: lightgrey;
+}
+
+.menuImg
+{
+  height:80%;
+  width:100%;
+}
+
+.priceContainer
+{
+  height:10%;
+  width:100%;
+  display:flex;
+  text-align: center;
+}
+
+.small
+{
+  background-color: lightblue;
+  width:100%;
+}
+
+.medium
+{
+  background-color: lightgreen;
+  width:100%;
+}
+
+.large
+{
+  background-color: lightpink;
+  width:100%;
+}
+
+.show
+{
+  height:80%;
+  width:50%;
+  background-color: grey;
+  border:3px solid black;
+  position:absolute;
+  top:10%;
+  left:25%;
+  overflow: hidden;
+}
+
+.close
+{
+  position:absolute;
+  right:0px;
+  color:red;
+  margin:10px;
+  font-size: 50px;
+}
+
+.show .menuImg
+{
+  height:70%;
+  object-fit: contain;
+  background-color: white;
+}
+
+.definition
+{
+  height:30%;
+  overflow:auto;
+}
+
+.definition p
+{
+  padding:5px;
+  text-align: justify;
+}
+
+form table
+{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input
+{
+  width:100%;
+}
+
+th,td
+{
+  border:1px solid;
+}
+
+td *
+{
+  width:100%;
+}
+
+.buttonContainer
+{
+  display:flex;
+}
+
+.buttonContainer input
+{
+  width:100%;
+}
+
+.result
+{
+  height:50%;
+  width:80%;
+  background-color: grey;
+  border:3px solid black;
+  position:absolute;
+  top:25%;
+  left:10%;
+  overflow: hidden;
+}
+
+.result table
+{
+  width:100%;
+}
+
+.result table tr
+{
+  text-align:center;
+}
+
+
+@media (max-width:1500px)
+{
+  .imgContainer
+  {
+    width:20%;
+  }
+}
+
+@media (max-width:1200px)
+{
+  .imgContainer
+  {
+    width:25%;
+  }
+}
+
+@media (max-width:900px)
+{
+  .imgContainer
+  {
+    width:33%;
+  }
+
+  .homeContainer1
+  {
+    display: none;
+  }
+
+  .homeContainer2
+  {
+    width:100%;
+  }
+}
+
+@media (max-width:600px)
+{
+  .imgContainer
+  {
+    width:50%;
+  }
+
+  .show
+  {
+    width:80%;
+    left:10%;
+  }
+}
+
+@media (max-width:480px)
+{
+  form table
+  {
+    width:100%;
+  }
+}
