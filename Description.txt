@@ -1,0 +1,4 @@
+This is a Pizza Order App(React App)
+- User can view the image, description and price of pizza
+- User also can choose the type, size and count of pizza
+- App will show the total price of order
